@@ -1,0 +1,38 @@
+[
+  {
+    "nome": "Chocolate ao Leite",
+    "tipo": "Chocolate",
+    "validade": "2025-12-10",
+    "peso": 90.00,
+    "unidade": "g",
+    "marca": "Cacau Show",
+    "preço": 12.90
+  },
+  {
+    "nome": "Ovo de Páscoa",
+    "tipo": "Ovo de Páscoa",
+    "validade": "2026-03-25",
+    "peso": 250.00,
+    "unidade": "g",
+    "marca": "Lacta",
+    "preço": 39.90
+  },
+  {
+    "nome": "Chocolate Amargo",
+    "tipo": "Chocolate",
+    "validade": "2025-11-30",
+    "peso": 100.00,
+    "unidade": "g",
+    "marca": "Lindt",
+    "preço": 18.50
+  },
+  {
+    "nome": "Bombom Sortido",
+    "tipo": "Bombom",
+    "validade": "2026-02-14",
+    "peso": 150.00,
+    "unidade": "g",
+    "marca": "Ferrero",
+    "preço": 25.90
+  }
+]

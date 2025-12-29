@@ -1,0 +1,124 @@
+Criação da pool de conexões MySql:
+
+host: Onde o MySql esta rodando.
+user: Usuário MySql.
+password: Senha.
+database: Nome do banco.
+connectionLimit: O maxiimo de conexões abertas.
+waitForConnections: Fila se encher o servidor.
+
+----------------------------------------------------------------------------------------
+
+const PORT = 3000;
+app.listen(PORT, async () => {
+  console.log(`A conexão está sendo executada na porta ${PORT}`);
+
+  const [result] = await connection.execute("SELECT 1");
+  if (result) {
+    console.log("Conexão ao BD feita com sucesso!");
+  }
+});
+
+Linha por linha:
+
+1. Cria a porta chamada 3000.
+2. Inicia o servidor com a função.
+3. Manda uma mensagem no console falando o nome da porta.
+4. Testa para ver se a conexão do banco está funcionando.
+5. Verfica para ver se é verdadeiro.
+6. Manda uma mensagem no console(só se for verdadeiro) dizendo que a conexão foi feita com sucesso.
+
+----------------------------------------------------------------------------------------
+
+app.get("/actor", async (req, res) => {
+  const [actors] = await connection.execute("SELECT * FROM actor");
+  return res.json(actors);
+});
+
+Lista todos os atores.
+
+----------------------------------------------------------------------------------------
+
+
+app.get("/actor/:id", async (req, res) => {
+  const { id } = req.params;
+  const [actors] = await connection.execute(
+    "SELECT * FROM actor WHERE actor_id = ?",
+    [id]
+  );
+
+
+Nesse codigo ele busca o ator pelo ID envidado da URL.
+E a '?' é como um antihacker para evitar que invadem o servidor.
+
+----------------------------------------------------------------------------------------
+
+const [actor] = actors; 
+const fn = `${actor.first_name[0]}${actor.first_name.slice(1).toLowerCase()}`;
+const ln = `${actor.last_name[0]}${actor.last_name.slice(1).toLowerCase()}`;
+const fullName = `${fn} ${ln}`;
+
+return res.json({
+  id: actor.actor_id,
+  fullName: fullName
+});
+
+Nesse codigo ele cria duas const chamadas fn e ln para pegar o primeiro e ultimo nome.
+Eles pegam a primeira posição do nome e a primeira posição do ultimo nome e deixa em 
+minusculo menos a primeira letra de cada um.
+
+----------------------------------------------------------------------------------------
+
+app.get("/ator", async function (req, res) {
+  const [atores] = await connection.execute("SELECT * FROM actor");
+  return res.json(atores);
+});
+
+Só muda o nome da rota.
+
+----------------------------------------------------------------------------------------
+
+app.get("/api/ator", async function (req, res) {
+  const [atores] = await connection.execute("SELECT * FROM actor");
+
+  const novos_atores = [];
+  for (const element of atores) {
+    novos_atores.push({
+      id: element.actor_id,
+      nome_completo: `${element.first_name} ${element.last_name}`,
+    });
+  }
+
+  return res.json(novos_atores);
+});
+
+Ele busca todos os atores e cria manualmente um array contendo id e nome_completo
+
+----------------------------------------------------------------------------------------
+
+app.get("/api/actor", async (req, res) => {
+  const [actors] = await connection.execute("SELECT * FROM actor");
+
+  const new_actors = actors.map((element) => {
+    return {
+      id: element.actor_id,
+      full_name: `${element.first_name} ${element.last_name}`,
+    };
+  });
+
+  return res.json(new_actors);
+});
+
+Só usa map invés de push e for.
+
+----------------------------------------------------------------------------------------
+
+app.get("/address", async (req, res) => {
+  const [address] = await connection.execute("SELECT * FROM address");
+  return res.json(address);
+});
+
+Ela apenas retorna tudo da tabela address.
+
+----------------------------------------------------------------------------------------
+

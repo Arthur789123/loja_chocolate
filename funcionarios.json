@@ -1,0 +1,32 @@
+[
+  {
+    "nome": "Marcos Oliveira",
+    "telefone": "(11) 98882-9911",
+    "cargo": "Caixa",
+    "e_mail": "marcos@chocolateria.com",
+    "senha": "M@rcos22",
+    "genero": "M",
+    "data_nascimento": "1992-03-29",
+    "cpf": "484.654.711-20"
+  },
+  {
+    "nome": "João Ribeiro",
+    "telefone": "(11) 99456-7780",
+    "cargo": "Gerente",
+    "e_mail": "joao@chocolateria.com",
+    "senha": "J0@0Ad!",
+    "genero": "M",
+    "data_nascimento": "1985-07-12",
+    "cpf": "454.163.759-55"
+  },
+  {
+    "nome": "Camila dos Santos",
+    "telefone": "(21) 97654-3210",
+    "cargo": "Vendedora",
+    "e_mail": "camila@chocolateria.com",
+    "senha": "C@mil@123",
+    "genero": "F",
+    "data_nascimento": "1998-11-14",
+    "cpf": "231.952.515-23"
+  }
+]

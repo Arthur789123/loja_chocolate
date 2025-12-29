@@ -1,0 +1,26 @@
+[
+  {
+    "id_produto": 1,
+    "id_cliente": 1,
+    "valor_total": 39.90,
+    "metodo_pagamento": "Pix"
+  },
+  {
+    "id_produto": 2,
+    "id_cliente": 2,
+    "valor_total": 12.90,
+    "metodo_pagamento": "Cartão de Crédito"
+  },
+  {
+    "id_produto": 1,
+    "id_cliente": 1,
+    "valor_total": 79.80,
+    "metodo_pagamento": "Cartão de Débito"
+  },
+  {
+    "id_produto": 2,
+    "id_cliente": 2,
+    "valor_total": 25.80,
+    "metodo_pagamento": "Dinheiro"
+  }
+]

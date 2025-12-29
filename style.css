@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cards {
+    display: flex;
+    gap: 8px                                                                                    ;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 300px;
+}
